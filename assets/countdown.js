@@ -1,9 +1,9 @@
 let tpsRestant = 0;
-let debut;
+let timer;
 let pause = false;
 
 function startTimer() {
-    //check for null input hours, minutes, seconds
+    // pour qu'une valeur nulle soit équivalente à zéro
     if (document.getElementById("txtHeures").value == "") {
         document.getElementById("txtHeures").value = "0";
     }
@@ -16,16 +16,16 @@ function startTimer() {
         document.getElementById("txtSecondes").value = "0";
     }
 
-    //get input hours, minutes, seconds
+    // on va chercher les valeurs entrées dans les inputs
     var heures = parseInt(document.getElementById("txtHeures").value);
     var minutes = parseInt(document.getElementById("txtMinutes").value);
     var secondes = parseInt(document.getElementById("txtSecondes").value);
 
-    //calculate time left in seconds
+    // on calcule le temps restant en secondes
     tpsRestant = (heures * 3600) + (minutes * 60) + secondes;
 
-    //start count down timer
-    debut = setInterval("countDown()", 1000);
+    //on lance le compte à rebours 
+    timer = setInterval("countDown()", 1000);
     document.getElementById('go').style.display = 'none';
     document.getElementById('stop').style.display = 'inline';
     document.getElementById('pause').style.display = 'inline';
@@ -40,6 +40,7 @@ function countDown() {
     tpsRestant = tpsRestant - 1;
 
     if (tpsRestant >= 0) {
+        // on divise le temps restant en hours minutes secondes
         heuresRestantes = Math.floor(tpsRestant / 3600);
         reste = tpsRestant % 3600;
 
@@ -51,7 +52,7 @@ function countDown() {
         document.getElementById('minutes').innerHTML = minutesRestantes;
         document.getElementById('secondes').innerHTML = secondesRestantes;
     } else {
-        clearInterval(debut);
+        clearInterval(timer);
         document.getElementById('go').style.display = 'inline';
         document.getElementById('stop').style.display = 'none';
         document.getElementById('pause').style.display = 'none';
@@ -63,7 +64,7 @@ function PauseChrono()
     if (!pause)
     {
         pause = true;
-        clearInterval(debut);
+        clearInterval(timer);
         document.getElementById('stop').style.display = 'none';
         document.getElementById('pause').value = 'Pause';
     }
