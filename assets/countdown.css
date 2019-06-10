@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "DS-Digital";
+    src: url(DS-DIGIT.TTF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+
+h1 {
+    text-align-last: center;
+    color: #F9C032;
+    font-family: "DS-Digital";
+    font-size: 8em;
+}
+
+
+#choose_time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 20px;
+    font-family: "DS-Digital";
+    color: white;
+}
+
+input {
+    height: 20px;
+    width: 60px;
+    margin: 20px 20px;
+    text-align: center;
+}
+
+#time_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 10px;
+    font-family: "DS-Digital";
+    color: white;
+}
+
+caption {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: white;
+}
+
+.output {
+    margin: 20px 20px;
+    width: 150px;
+    height: 100px;
+    border: none;
+    text-align: center;
+    font-size: 9em;
+    font-family: "DS-Digital";
+    color: #F9C032;
+    background-color: black;
+}
+
+#boutons {
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+}
+
+.bouton {
+    margin-left: 50px;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+
+.bouton:hover {
+    border: 1px solid black;
+    background-color: #F9C032;
+}
