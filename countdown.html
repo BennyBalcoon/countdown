@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/countdown.css">
+    <title>24 Countdown</title>
+</head>
+
+<body>
+    <header>
+        <h1>24</h1>
+    </header>
+
+    <form id="choose_time">
+        <!-- Table to input total time -->
+        <table>
+            <caption>Choose your Time</caption>
+            <th>HRS</th>
+            <th>MINS</th>
+            <th>SECS</th>
+            <tr>
+                <td><input type="text" id="txtHeures" value="0" /></td>
+                <td><input type="text" id="txtMinutes" value="0" /></td>
+                <td><input type="text" id="txtSecondes" value="0" /></td>
+            </tr>
+
+        </table>
+    </form>
+
+    <section id="time_left">
+        <!-- Table to output time left -->
+        <table name="timer" id="timer">
+            <caption>Time Left</caption>
+            <th>HRS</th>
+            <th>MINS</th>
+            <th>SECS</th>
+            <tr>
+                <td class="output" id="heures" align="center">0</td>
+                <td class="output" id="minutes" align="center">0</td>
+                <td class="output" id="secondes" align="center">0</td>
+
+            </tr>
+        </table>
+    </section>
+
+    <div id="boutons">
+            <input type='button' class="bouton" name="go" id="go" value="Go!" onclick="startTimer()"/>
+            <input type='button' class="bouton" name="stop" id="stop" value="Stop!" onclick="clearInterval(debut)" style="display:none"/>
+            <input type="button" class="bouton" name="pause" id="pause" value="Pause" style="display:none" onclick="PauseChrono()"/>
+        </div>
+
+
+</body>
+
+<script src="./assets/countdown.js"></script>
+
+</html>
