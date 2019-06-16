@@ -36,18 +36,18 @@
             <th>MINS</th>
             <th>SECS</th>
             <tr>
-                <td class="output" id="heures" align="center">0</td>
-                <td class="output" id="minutes" align="center">0</td>
-                <td class="output" id="secondes" align="center">0</td>
+                <td class="output" id="heures" align="center">00</td>
+                <td class="output" id="minutes" align="center">00</td>
+                <td class="output" id="secondes" align="center">00</td>
 
             </tr>
         </table>
     </section>
 
     <div id="boutons">
-            <input type='button' class="bouton" name="go" id="go" value="Go!" onclick="startTimer()"/>
-            <input type='button' class="bouton" name="stop" id="stop" value="Stop!" onclick="clearInterval(timer)" style="display:none"/>
-            <input type="button" class="bouton" name="pause" id="pause" value="Pause" style="display:none" onclick="PauseChrono()"/>
+            <input type='button' class="bouton" name="go" id="go" value="Go!" onclick="initTimer(); startTimer()"/>
+            <input type='button' class="bouton" name="stop" id="stop" value="Stop!" onclick="stopTimer()" style="display:none"/>
+            <input type="button" class="bouton" name="pause" id="pause" value="Pause" style="display:none" onclick="pauseTimer()"/>
         </div>
 
 
